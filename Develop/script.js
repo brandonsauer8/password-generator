@@ -45,3 +45,29 @@ if (numericPrompt === numericCharacter) {
 } else {
   console.log ("I do NOT want to use numeric characters");
 }
+
+//Ask user if they would like to use lower case characters
+
+var lowerCase = true;
+var lowerPrompt = confirm("Click OK if you would like to use lower case characters in your password");
+
+if (lowerPrompt === lowerCase) {
+  console.log ("I would like to use lowercase characters.");
+} else {
+  console.log ("I would NOT like to use lower case characters.");
+}
+
+//Ask user if they would like to use upper case characters
+var upperCase = true;
+var upperPrompt = ("Click OK if you would like to use upper case characters in your password.")
+
+if (upperPrompt === upperCase) {
+  console.log ("I would like to use uppercase characters.");
+} else {
+  console.log ("I would NOT like to use uppercase characters.");
+}
+
+//If none chosen, loop to ask the question again
+alert("You must choose at least one option.")
+
+console.log("I do NOT want numeric characters");
