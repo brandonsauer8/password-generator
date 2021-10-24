@@ -19,17 +19,16 @@ generateBtn.addEventListener("click", writePassword);
 //Ask user how many characters they want their password to be
 var characters = prompt("How many characters do you want your password to contain?");
 
-if (characters < 8) {
-  alert("Password length must be between 8-128 characters");
-} if (characters > 128) {
+if (characters < 8 || characters > 128) {
   alert ("Password length must be between 8-128 characters");
-} if (characters > 8) {
+  prompt("How many characters would you like your password to be?");
+} else if (characters > 8 || characters < 128) {
   console.log (`I want ${characters} characters in my password`);
 }
 
 //Asks user if the want to use special characters
 var specialCharacter = true;
-var specialPrompt = prompt("Click OK if you would like to use special characters in your password.");
+var specialPrompt = confirm("Click OK if you would like to use special characters in your password.");
 
 if (specialPrompt === specialCharacter) {
   console.log ("I would like special characters.");
@@ -39,7 +38,7 @@ if (specialPrompt === specialCharacter) {
 
 //Ask user if they would like to use numeric characters
 var numericCharacter = true;
-var numericPrompt = prompt("Click OK to if you would like to use numeric characters in your password");
+var numericPrompt = confirm("Click OK to if you would like to use numeric characters in your password");
 
 if (numericPrompt === numericCharacter) {
   console.log ("I want to use numeric characters.");
